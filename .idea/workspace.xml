@@ -10,138 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd597adf-ac2f-4bce-959c-163e1929ff6d" name="变更" comment="ExamSystem">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/ExamSystem_war.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/ExamSystem_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/85f0cdb0-3d73-48ca-9a4d-fc6d0303ed05.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/85f0cdb0-3d73-48ca-9a4d-fc6d0303ed05/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/85f0cdb0-3d73-48ca-9a4d-fc6d0303ed05/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/85f0cdb0-3d73-48ca-9a4d-fc6d0303ed05/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/85f0cdb0-3d73-48ca-9a4d-fc6d0303ed05/storage_v2/_src_/schema/sys.zb4BAA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/HelloServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/LoginServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/RegisterServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/assign/AssignServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/assign/SelectAssignServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/course/AddCourseServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/course/CourseListServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/course/DeleteCourseServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/course/QueryCourseServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/course/UpdateCourseServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/coursepeople/CoursePeopleServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/coursepeople/SelectCoursePeopleServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/exam/AddExamServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/exam/DeleteExamServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/exam/EditExamServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/exam/ExamListServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/exam/ExamNameListServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/exam/ExamServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/exam/UpdateExamServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/examItem/ExamItemServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/examItem/SelectExamItemServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/examItem/add/AddJudgeServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/examItem/add/AddMultipleServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/examItem/add/AddShortServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/examItem/add/AddSingleServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/examItem/delete/DeleteJudgmentServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/examItem/delete/DeleteMultipleServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/examItem/delete/DeleteShortServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/examItem/delete/DeleteSingleServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/examcourse/AddExamCourseServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/jdbc/JDBCServletContextListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/myexaming/MyExamingServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/myexaming/StartExamServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/myexaming/SubmitExamServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/userInfo/UserInfoServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/usercourse/AddUserCourseServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/usercourse/DeleteUserCourseServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/userexam/QueryscoreServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/userexam/SelectUserExamServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/controller/userexam/StudentScoreServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/dao/course/CourseDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/dao/course/ICourseDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/dao/exam/ExamDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/dao/exam/IExamDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/dao/examItem/ExamItemDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/dao/examItem/IExamItemDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/dao/examcourse/ExamCourseDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/dao/examcourse/IExamCourseDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/dao/myeximing/IMyExamingDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/dao/myeximing/MyExamingDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/dao/user/IUserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/dao/user/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/dao/usercourse/IUserCourseDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/dao/usercourse/UserCourseDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/dao/userexam/IUserExamDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/dao/userexam/UserExamDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/filter/LoginFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/model/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/model/Course.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/model/Exam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/model/ExamCourse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/model/ExamCourse1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/model/Judgment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/model/MultipleChoice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/model/ShortAnswer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/model/SingleChoice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/model/Students.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/model/Teacher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/model/UserCourse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/model/UserExam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/model/UserExam1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lhy/examsystem/util/TimeUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assign.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/course.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/coursePeople.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/exam.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/examItem.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/examover.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/myexaming.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/result.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/score.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/startexam.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap/css/bootstrap-theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap/css/bootstrap-theme.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap/css/bootstrap-theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap/css/bootstrap-theme.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap/js/npm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/jquery-3.6.0.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/jquery-3.6.0.slim.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/studentIndex.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/studentScore.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/userInfo.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/welcome.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/lhy/examsystem/util/TimeUtilTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/85f0cdb0-3d73-48ca-9a4d-fc6d0303ed05.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/85f0cdb0-3d73-48ca-9a4d-fc6d0303ed05.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/startexam.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/startexam.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,6 +32,9 @@
         <option value="Jsp File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -189,11 +64,15 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "last_opened_file_path": "D:/软件测试/课设三/ExamSystem",
-    "settings.editor.selected.configurable": "MavenSettings",
+    "project.structure.last.edited": "库",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -336,8 +215,20 @@
       <workItem from="1654253499560" duration="3048000" />
       <workItem from="1654258377389" duration="11886000" />
       <workItem from="1654304493769" duration="30414000" />
-      <workItem from="1654340296524" duration="4801000" />
+      <workItem from="1654340296524" duration="4945000" />
+      <workItem from="1654345408712" duration="195000" />
+      <workItem from="1654396071394" duration="4852000" />
+      <workItem from="1654418471885" duration="1751000" />
+      <workItem from="1654473815766" duration="292000" />
     </task>
+    <task id="LOCAL-00001" summary="ExamSystem">
+      <created>1654345229777</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1654345229777</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

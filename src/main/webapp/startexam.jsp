@@ -1,6 +1,8 @@
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="com.lhy.examsystem.model.*" %><%--
+<%@ page import="com.lhy.examsystem.model.*" %>
+<%@ page import="java.util.Date" %>
+<%@ page import="java.sql.Timestamp" %><%--
   Created by IntelliJ IDEA.
   User: purity
   Date: 2022/6/4
@@ -16,8 +18,20 @@
 <%
     Exam exam = (Exam) request.getAttribute("exam");
 %>
+<%
+    long current_time=System.currentTimeMillis();//系统时间
+    Timestamp end_time=exam.getEndTime();//考试结束时间
+    long left_time=end_time.getTime()-current_time;
+    int left_second=(int) (left_time/1000);
+    //将秒数转换为小时、分钟、秒
+    int hour=left_second/3600;
+    int minute=(left_second-hour*3600)/60;
+    int second=left_second-hour*3600-minute*60;
+    String time_left=hour+":"+minute+":"+second;
+%>
 <head>
     <title><%=exam.getName()%>考试</title>
+    <script type="text/javascript" src="static/js/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 <h2><%=exam.getName()%></h2>
@@ -29,6 +43,10 @@
     List<Judgment> judgments = (List<Judgment>) request.getAttribute("judgments")!=null?(List<Judgment>) request.getAttribute("judgments"):new ArrayList<>();
     List<ShortAnswer> shortAnswers = (List<ShortAnswer>) request.getAttribute("shortAnswers")!=null?(List<ShortAnswer>) request.getAttribute("shortAnswers"):new ArrayList<>();
 %>
+<div class="float-right">
+    <p id="time">倒计时:<%=time_left%></p>
+</div>
+<br>
 <form class="form-horizontal" role="form" action="<%=basePath%>submitExam" method="post">
     <h3>单选题</h3>
     <%
@@ -114,8 +132,59 @@
         }
     %>
     <div class="modal-footer">
-        <button type="submit" class="btn btn-primary">提交</button>
+        <button type="submit" class="btn btn-primary" id="submit">提交</button>
     </div>
 </form>
+<style>
+    .float-right {
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 10;
+    }
+</style>
+<script>
+    //倒计时实时改变时间
+    var timerCount= window.setTimeout("changeTime()",1000);
+    function changeTime() {
+        //获取剩余的时间是服务器端的时间
+        var time = $("#time").text();
+        var timeArray = time.split(":");
+        var hour = timeArray[0];
+        var minute = timeArray[1];
+        var second = timeArray[2];
+        second--;
+        if (second < 0) {
+            second = 59;
+            minute--;
+        }
+        if (minute < 0) {
+            minute = 59;
+            hour--;
+        }
+        if (hour < 0) {
+            hour = 0;
+            minute = 0;
+            second = 0;
+        }
+        if (hour < 10) {
+            hour = "0" + hour;
+        }
+        if (minute < 10) {
+            minute = "0" + minute;
+        }
+        if (second < 10) {
+            second = "0" + second;
+        }
+        var newTime = hour + ":" + minute + ":" + second;
+        document.getElementById("time").innerHTML=newTime;
+        if(hour===0&&minute===0&&second===0){
+            window.clearTimeout(timerCount);
+            $("#submit").click();
+        }else{
+            timerCount=window.setTimeout("changeTime()",1000);
+        }
+    }
+</script>
 </body>
 </html>
