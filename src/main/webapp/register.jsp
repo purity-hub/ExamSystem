@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>考试管理系统-登录</title>
+    <title>考试管理系统-注册</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- 引入jQuery -->
     <script type="text/javascript" src="static/js/jquery-3.6.0.min.js"></script>

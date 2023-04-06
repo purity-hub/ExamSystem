@@ -26,28 +26,58 @@ public class AddSingleServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String SingleId = request.getParameter("SingleId");
         HttpSession session = request.getSession();
         int examId = (int) session.getAttribute("examId");
-        String question = request.getParameter("question");
-        String answer = request.getParameter("answer");
-        String achoice = request.getParameter("achoice");
-        String bchoice = request.getParameter("bchoice");
-        String cchoice = request.getParameter("cchoice");
-        String dchoice = request.getParameter("dchoice");
-        ExamItemDao examItemDao = new ExamItemDao();
-        SingleChoice singleChoice = new SingleChoice();
-        singleChoice.setExamId(examId);
-        singleChoice.setQuestion(question);
-        singleChoice.setAnswer(answer);
-        singleChoice.setAChoice(achoice);
-        singleChoice.setBChoice(bchoice);
-        singleChoice.setCChoice(cchoice);
-        singleChoice.setDChoice(dchoice);
-        try {
-            examItemDao.AddSingle(con, singleChoice);
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
+        if(SingleId == null || SingleId.equals("")){
+            //添加
+            String question = request.getParameter("question");
+            String answer = request.getParameter("answer");
+            String achoice = request.getParameter("achoice");
+            String bchoice = request.getParameter("bchoice");
+            String cchoice = request.getParameter("cchoice");
+            String dchoice = request.getParameter("dchoice");
+            ExamItemDao examItemDao = new ExamItemDao();
+            SingleChoice singleChoice = new SingleChoice();
+            singleChoice.setExamId(examId);
+            singleChoice.setQuestion(question);
+            singleChoice.setAnswer(answer);
+            singleChoice.setAChoice(achoice);
+            singleChoice.setBChoice(bchoice);
+            singleChoice.setCChoice(cchoice);
+            singleChoice.setDChoice(dchoice);
+            try {
+                examItemDao.AddSingle(con, singleChoice);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+            request.getRequestDispatcher("/selectExamItem").forward(request, response);
+        }else{
+            //修改
+            String question = request.getParameter("question");
+            String aChoice = request.getParameter("achoice");
+            String bChoice = request.getParameter("bchoice");
+            String cChoice = request.getParameter("cchoice");
+            String dChoice = request.getParameter("dchoice");
+            String answer = request.getParameter("answer");
+            ExamItemDao examItemDao = new ExamItemDao();
+            SingleChoice singleChoice = new SingleChoice();
+            singleChoice.setId(Long.parseLong(SingleId));
+            singleChoice.setExamId(examId);
+            singleChoice.setQuestion(question);
+            singleChoice.setAChoice(aChoice);
+            singleChoice.setBChoice(bChoice);
+            singleChoice.setCChoice(cChoice);
+            singleChoice.setDChoice(dChoice);
+            singleChoice.setAnswer(answer);
+            try {
+                examItemDao.UpdateSingle(con, singleChoice);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+            request.getRequestDispatcher("/selectExamItem").forward(request, response);
         }
-        request.getRequestDispatcher("/selectExamItem").forward(request, response);
+
+
     }
 }

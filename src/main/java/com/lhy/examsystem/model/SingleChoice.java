@@ -84,4 +84,8 @@ public class SingleChoice {
     this.answer = answer;
   }
 
+  @Override
+  public String toString() {
+    return id + "," + examId + "," + question + "," + aChoice + "," + bChoice + "," + cChoice + "," + dChoice + "," + answer;
+  }
 }

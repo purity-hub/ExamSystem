@@ -11,7 +11,7 @@
  Target Server Version : 80026
  File Encoding         : 65001
 
- Date: 06/06/2022 08:09:09
+ Date: 31/08/2022 17:43:10
 */
 
 SET NAMES utf8mb4;
@@ -29,7 +29,7 @@ CREATE TABLE `course`  (
   `credit` int NULL DEFAULT NULL,
   `time` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 17 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '课程' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 16 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '课程' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of course
@@ -64,12 +64,12 @@ CREATE TABLE `exam`  (
   `state` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `exam_time` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of exam
 -- ----------------------------
-INSERT INTO `exam` VALUES (1, 'java期末考试', '2022-06-03 07:40:52', 15, 5, 5, 3, '2022-06-20 09:21:00', '2022-06-02 07:41:00', 'admin', 112, 4, 4, 4, 4, '', NULL, 100);
+INSERT INTO `exam` VALUES (1, 'java期末考试', '2022-06-03 07:40:52', 15, 5, 5, 3, '2022-11-20 09:21:00', '2022-06-02 07:41:00', 'admin', 112, 4, 4, 4, 4, '', NULL, 100);
 INSERT INTO `exam` VALUES (2, '数据库期末考试', '2022-06-03 13:23:53', 15, 5, 6, 5, '2022-06-03 15:04:00', '2022-06-03 13:24:00', 'admin', 124, 4, 4, 4, 4, '', NULL, 100);
 INSERT INTO `exam` VALUES (3, '11', '2022-06-03 17:33:25', 5, 5, 1, 1, '2022-06-03 10:23:00', '2022-06-03 09:33:00', 'admin', 67, 10, 1, 11, 1, '', NULL, 50);
 INSERT INTO `exam` VALUES (4, '测试', '2022-06-03 17:37:13', 11, 11, 11, 11, '2022-06-03 11:40:00', '2022-06-03 09:38:00', 'admin', 484, 11, 11, 11, 11, '', NULL, 122);
@@ -85,7 +85,7 @@ CREATE TABLE `exam_course`  (
   `course_id` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `exam_course_id_uindex`(`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of exam_course
@@ -106,7 +106,7 @@ CREATE TABLE `judgment`  (
   `question` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `answer` varchar(2) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 17 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 23 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of judgment
@@ -144,8 +144,8 @@ CREATE TABLE `multiple_choice`  (
 -- ----------------------------
 -- Records of multiple_choice
 -- ----------------------------
-INSERT INTO `multiple_choice` VALUES (1, 1, '1+1?', '2', '2', '1', '4', 'AB');
-INSERT INTO `multiple_choice` VALUES (3, 6, '1+1=2?', '对', '对', '对', '错', 'ABC');
+INSERT INTO `multiple_choice` VALUES (3, 6, '1+1=2?', '对', '对', '对', '错', 'ABCD');
+INSERT INTO `multiple_choice` VALUES (4, 1, '1+1?', '1', '2', '1', '1', 'ACD');
 
 -- ----------------------------
 -- Table structure for short_answer
@@ -157,12 +157,12 @@ CREATE TABLE `short_answer`  (
   `question` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `answer` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of short_answer
 -- ----------------------------
-INSERT INTO `short_answer` VALUES (2, 1, '1+1=2?', '22');
+INSERT INTO `short_answer` VALUES (2, 1, '1+1=2?', '2');
 INSERT INTO `short_answer` VALUES (3, 1, '开发与运行Java程序需要经过的三个主要步骤为', '编辑源程序     、编译生成字节码     和       解释运行字节码        。');
 INSERT INTO `short_answer` VALUES (4, 1, '设 x = 2 ，则表达式 ( x + + )／3 的值是', '0');
 INSERT INTO `short_answer` VALUES (5, 1, '接口中的方法只能是', '抽象方法');
@@ -181,12 +181,12 @@ CREATE TABLE `single_choice`  (
   `d_choice` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `answer` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 15 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of single_choice
 -- ----------------------------
-INSERT INTO `single_choice` VALUES (1, 1, '编译Java Application 源程序文件将产生相应的字节码文件，这些字节码文件的扩展名为', 'java', 'class', 'html ', 'exe', 'B');
+INSERT INTO `single_choice` VALUES (1, 1, '编译Java Application 源程序文件将产生相应的字节码文件，这些字节码文件的扩展名为', 'dll', 'exe', 'txt1', 'zip', 'B');
 INSERT INTO `single_choice` VALUES (2, 1, '如下哪个是合法的Java中的标识符', 'fieldname ', 'super ', '#number', '3number ', 'A');
 INSERT INTO `single_choice` VALUES (5, 1, '设 x = 1 , y = 2 , z = 3，则表达式 y＋＝z－－/＋＋x 的值是', '3', '3.5', '4', '5', 'A');
 INSERT INTO `single_choice` VALUES (6, 1, '不允许作为类及类成员的访问控制符的是', 'public ', 'private', 'static', 'protected', 'C');
@@ -218,9 +218,10 @@ CREATE TABLE `user`  (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES (1, 'admin', '123456', 'admin', '2022-06-02 13:21:44', '罗鸿运', 1, 12, '18870745179');
+INSERT INTO `user` VALUES (1, 'admin', '123456', 'admin', '2022-06-02 13:21:44', '罗鸿林', 1, 12, '18870745179');
 INSERT INTO `user` VALUES (2, 'purity', '11111111', 'teacher', '2022-06-02 14:11:38', '罗鸿运', 1, 1111, '18870745179');
 INSERT INTO `user` VALUES (3, '光头强', '111111', 'student', '2022-06-04 09:09:10', '光头强', 1, 23, '11111111111');
+INSERT INTO `user` VALUES (4, 'purity-good', '11111111', 'student', '2022-08-29 05:30:50', '罗鸿天', 1, 1111, '18870745179');
 
 -- ----------------------------
 -- Table structure for user_course
@@ -232,7 +233,7 @@ CREATE TABLE `user_course`  (
   `course_id` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `user_source_id_uindex`(`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of user_course
@@ -253,7 +254,7 @@ CREATE TABLE `user_exam`  (
   `mark` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `user_exam_id_uindex`(`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of user_exam

@@ -44,4 +44,8 @@ public class Judgment {
     this.answer = answer;
   }
 
+  @Override
+  public String toString() {
+    return id + "," + examId + "," + question + "," + answer;
+  }
 }

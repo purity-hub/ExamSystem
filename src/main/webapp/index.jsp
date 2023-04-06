@@ -59,10 +59,10 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="/teacher" target="mainFrame">教师管理</a>
+                        <a href="${pageContext.request.contextPath}/TeacherListServlet" target="mainFrame">教师管理</a>
                     </li>
                     <li>
-                        <a href="/students" target="mainFrame">学生管理</a><!--学生默认密码111111-->
+                        <a href="${pageContext.request.contextPath}/StudentListServlet" target="mainFrame">学生管理</a><!--学生默认密码111111-->
                     </li>
                 </ul>
             </li>

@@ -1,12 +1,6 @@
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="com.lhy.examsystem.model.ExamCourse" %><%--
-  Created by IntelliJ IDEA.
-  User: purity
-  Date: 2022/6/4
-  Time: 11:28
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="com.lhy.examsystem.model.ExamCourse" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>

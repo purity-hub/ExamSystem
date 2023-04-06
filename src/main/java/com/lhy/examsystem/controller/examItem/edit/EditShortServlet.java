@@ -1,4 +1,4 @@
-package com.lhy.examsystem.controller.examItem.add;
+package com.lhy.examsystem.controller.examItem.edit;
 
 import com.lhy.examsystem.dao.examItem.ExamItemDao;
 import com.lhy.examsystem.model.ShortAnswer;
@@ -10,8 +10,9 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-@WebServlet(name = "AddShortServlet", value = "/addShort")
-public class AddShortServlet extends HttpServlet {
+@WebServlet(name = "EditShortServlet", value = "/EditShortServlet")
+public class EditShortServlet extends HttpServlet {
+
     private Connection con;
 
     @Override
@@ -26,8 +27,8 @@ public class AddShortServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        HttpSession session = request.getSession();
-        int examId = (int) session.getAttribute("examId");
+        int id = request.getParameter("id") == null ? 0 : Integer.parseInt(request.getParameter("id"));
+        int examId = request.getParameter("examId") == null ? 0 : Integer.parseInt(request.getParameter("examId"));
         String ShortId = request.getParameter("ShortId");
         if(ShortId == null || ShortId.equals("")){
             //添加
@@ -35,22 +36,7 @@ public class AddShortServlet extends HttpServlet {
             String answer = request.getParameter("answer");
             ExamItemDao examItemDao = new ExamItemDao();
             ShortAnswer shortAnswer = new ShortAnswer();
-            shortAnswer.setExamId(examId);
-            shortAnswer.setQuestion(question);
-            shortAnswer.setAnswer(answer);
-            try {
-                examItemDao.AddShort(con, shortAnswer);
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
-            }
-            request.getRequestDispatcher("/selectExamItem").forward(request, response);
-        }else{
-            //修改
-            String question = request.getParameter("question");
-            String answer = request.getParameter("answer");
-            ExamItemDao examItemDao = new ExamItemDao();
-            ShortAnswer shortAnswer = new ShortAnswer();
-            shortAnswer.setId(Long.parseLong(ShortId));
+            shortAnswer.setId(id);
             shortAnswer.setExamId(examId);
             shortAnswer.setQuestion(question);
             shortAnswer.setAnswer(answer);
@@ -59,7 +45,17 @@ public class AddShortServlet extends HttpServlet {
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
-            request.getRequestDispatcher("/selectExamItem").forward(request, response);
+        }else{
+            //修改
+            String question = request.getParameter("question");
+            String answer = request.getParameter("answer");
+            ExamItemDao examItemDao = new ExamItemDao();
+            ShortAnswer shortAnswer = new ShortAnswer();
+            shortAnswer.setId(id);
+            shortAnswer.setExamId(examId);
+            shortAnswer.setQuestion(question);
+            shortAnswer.setAnswer(answer);
+
         }
 
     }

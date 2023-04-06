@@ -18,6 +18,14 @@ public interface IExamItemDao {
 
     public List<ShortAnswer> QueryShort(Connection con,int examId) throws SQLException;
 
+    public SingleChoice QuerySingleById(Connection con,int id) throws SQLException;
+
+    public MultipleChoice QueryMultipleById(Connection con,int id) throws SQLException;
+
+    public Judgment QueryJudgmentById(Connection con,int id) throws SQLException;
+
+    public ShortAnswer QueryShortById(Connection con,int id) throws SQLException;
+
     public int AddSingle(Connection con,SingleChoice singleChoice) throws SQLException;
 
     public int AddMultiple(Connection con,MultipleChoice multipleChoice) throws SQLException;

@@ -95,6 +95,79 @@ public class ExamItemDao implements IExamItemDao {
     }
 
     @Override
+    public SingleChoice QuerySingleById(Connection con, int id) throws SQLException {
+        String sql = "select * from single_choice where id = ?";
+        PreparedStatement preparedStatement = con.prepareStatement(sql);
+        preparedStatement.setInt(1,id);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        SingleChoice singleChoice = new SingleChoice();
+        while (resultSet.next()){
+            singleChoice.setId(resultSet.getInt("id"));
+            singleChoice.setExamId(resultSet.getInt("exam_id"));
+            singleChoice.setQuestion(resultSet.getString("question"));
+            singleChoice.setAnswer(resultSet.getString("answer"));
+            singleChoice.setAChoice(resultSet.getString("a_choice"));
+            singleChoice.setBChoice(resultSet.getString("b_choice"));
+            singleChoice.setCChoice(resultSet.getString("c_choice"));
+            singleChoice.setDChoice(resultSet.getString("d_choice"));
+        }
+        return singleChoice;
+    }
+
+    @Override
+    public MultipleChoice QueryMultipleById(Connection con, int id) throws SQLException {
+        String sql = "select * from multiple_choice where id = ?";
+        PreparedStatement preparedStatement = con.prepareStatement(sql);
+        preparedStatement.setInt(1,id);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        MultipleChoice multipleChoice = new MultipleChoice();
+        while (resultSet.next()){
+            multipleChoice.setId(resultSet.getInt("id"));
+            multipleChoice.setExamId(resultSet.getInt("exam_id"));
+            multipleChoice.setQuestion(resultSet.getString("question"));
+            multipleChoice.setAnswer(resultSet.getString("answer"));
+            multipleChoice.setAChoice(resultSet.getString("a_choice"));
+            multipleChoice.setBChoice(resultSet.getString("b_choice"));
+            multipleChoice.setCChoice(resultSet.getString("c_choice"));
+            multipleChoice.setDChoice(resultSet.getString("d_choice"));
+        }
+        return multipleChoice;
+    }
+
+    @Override
+    public Judgment QueryJudgmentById(Connection con, int id) throws SQLException {
+        String sql = "select * from judgment where id = ?";
+        PreparedStatement preparedStatement = con.prepareStatement(sql);
+        preparedStatement.setInt(1,id);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        Judgment judgment = new Judgment();
+        while (resultSet.next()){
+            judgment.setId(resultSet.getInt("id"));
+            judgment.setExamId(resultSet.getInt("exam_id"));
+            judgment.setQuestion(resultSet.getString("question"));
+            judgment.setAnswer(resultSet.getString("answer"));
+        }
+        return judgment;
+    }
+
+    @Override
+    public ShortAnswer QueryShortById(Connection con, int id) throws SQLException {
+        String sql = "select * from short_answer where id = ?";
+        PreparedStatement preparedStatement = con.prepareStatement(sql);
+        preparedStatement.setInt(1,id);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        ShortAnswer shortAnswer = new ShortAnswer();
+        while (resultSet.next()){
+            shortAnswer.setId(resultSet.getInt("id"));
+            shortAnswer.setExamId(resultSet.getInt("exam_id"));
+            shortAnswer.setQuestion(resultSet.getString("question"));
+            shortAnswer.setAnswer(resultSet.getString("answer"));
+        }
+        return shortAnswer;
+    }
+
+
+    @Override
     public int AddSingle(Connection con, SingleChoice singleChoice) throws SQLException {
         String sql = "insert into single_choice(exam_id,question,answer,a_choice,b_choice,c_choice,d_choice) values(?,?,?,?,?,?,?)";
         PreparedStatement preparedStatement = con.prepareStatement(sql);

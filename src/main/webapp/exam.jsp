@@ -1,5 +1,6 @@
 <%@ page import="com.lhy.examsystem.model.Exam" %>
-<%@ page import="java.util.List" %><%--
+<%@ page import="java.util.List" %>
+<%--
   Created by IntelliJ IDEA.
   User: purity
   Date: 2022/6/3
@@ -318,6 +319,7 @@
                 examId:examId
             },
             success:function (data) {
+                //response.getWriter().write(exam.toString());
                 var exam = data.split(",");
                 $('#examId').val(exam[0]);
                 $('#examName1').val(exam[1]);//试卷名称
